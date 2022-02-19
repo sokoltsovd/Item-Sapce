@@ -12,10 +12,11 @@ class ViewController: UIViewController {
     let dotaButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("DOTA 2", for: .normal)
-        button.backgroundColor = .black
+        button.backgroundColor = .purple
         button.tintColor = .white
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        button.layer.cornerRadius = 30
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        button.layer.cornerRadius = 20
+        button.tag = 0
         button.translatesAutoresizingMaskIntoConstraints = false
         
         return button
@@ -24,10 +25,11 @@ class ViewController: UIViewController {
     let csgoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("CS:GO", for: .normal)
-        button.backgroundColor = .black
+        button.backgroundColor = .purple
         button.tintColor = .white
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        button.layer.cornerRadius = 30
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        button.layer.cornerRadius = 20
+        button.tag = 1
         button.translatesAutoresizingMaskIntoConstraints = false
         
         return button
@@ -37,7 +39,7 @@ class ViewController: UIViewController {
         let image = UIImageView()
         image.backgroundColor = .black
         image.image = UIImage(named: "chest")
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .scaleAspectFill
         image.layer.borderWidth = 5
         image.clipsToBounds = true
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -61,6 +63,8 @@ class ViewController: UIViewController {
     private func setupViews() {
         view.backgroundColor = .black
         view.addSubview(selectItemImageView)
+        view.addSubview(dotaButton)
+        view.addSubview(csgoButton)
     }
     
     
@@ -80,11 +84,17 @@ extension ViewController {
         ])
         
         NSLayoutConstraint.activate([
-            
+            dotaButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
+            dotaButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1/3),
+            dotaButton.heightAnchor.constraint(equalToConstant: 50),
+            dotaButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            
+            csgoButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),
+            csgoButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1/3),
+            csgoButton.heightAnchor.constraint(equalToConstant: 50),
+            csgoButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
 }
