@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Item Sapce
-//
-//  Created by Dmitry Sokoltsov on 18.02.2022.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -18,6 +11,7 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 20
         button.tag = 0
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(selectButtonTaped), for: .touchUpInside)
         
         return button
     }()
@@ -37,7 +31,7 @@ class ViewController: UIViewController {
     
     let selectItemImageView: UIImageView = {
         let image = UIImageView()
-        image.backgroundColor = .black
+        image.backgroundColor = .none
         image.image = UIImage(named: "chest")
         image.contentMode = .scaleAspectFill
         image.layer.borderWidth = 5
@@ -61,12 +55,30 @@ class ViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         view.addSubview(selectItemImageView)
         view.addSubview(dotaButton)
         view.addSubview(csgoButton)
     }
     
+    
+    @objc private func selectButtonTaped(_ sender: UIButton){
+        showMyViewControllerInACustomizedSheet()
+    }
+    
+    //MARK: - UISheetPresentationController
+    
+    func showMyViewControllerInACustomizedSheet() {
+        let viewControllerToPresent = SheetPresentationController()
+        if let sheet = viewControllerToPresent.sheetPresentationController {
+            sheet.detents = [.medium(), .large()]
+            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.prefersEdgeAttachedInCompactHeight = true
+            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+        }
+        present(viewControllerToPresent, animated: true, completion: nil)
+    }
     
 }
 
