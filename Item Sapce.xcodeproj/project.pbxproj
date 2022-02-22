@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E87B0D6E27C57ECA009A557D /* SheetPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87B0D6D27C57ECA009A557D /* SheetPresentationController.swift */; };
 		E8D6EA4927BFC9BA0062BACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6EA4827BFC9BA0062BACE /* AppDelegate.swift */; };
 		E8D6EA4B27BFC9BA0062BACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6EA4A27BFC9BA0062BACE /* SceneDelegate.swift */; };
 		E8D6EA4D27BFC9BA0062BACE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6EA4C27BFC9BA0062BACE /* ViewController.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E87B0D6D27C57ECA009A557D /* SheetPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetPresentationController.swift; sourceTree = "<group>"; };
 		E8D6EA4527BFC9BA0062BACE /* Item Sapce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Item Sapce.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D6EA4827BFC9BA0062BACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8D6EA4A27BFC9BA0062BACE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				E8D6EA4827BFC9BA0062BACE /* AppDelegate.swift */,
 				E8D6EA4A27BFC9BA0062BACE /* SceneDelegate.swift */,
+				E87B0D6D27C57ECA009A557D /* SheetPresentationController.swift */,
 				E8D6EA4C27BFC9BA0062BACE /* ViewController.swift */,
 				E8D6EA5127BFC9BC0062BACE /* Assets.xcassets */,
 				E8D6EA5327BFC9BC0062BACE /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 				E8D6EA4D27BFC9BA0062BACE /* ViewController.swift in Sources */,
 				E8D6EA4927BFC9BA0062BACE /* AppDelegate.swift in Sources */,
 				E8D6EA4B27BFC9BA0062BACE /* SceneDelegate.swift in Sources */,
+				E87B0D6E27C57ECA009A557D /* SheetPresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
